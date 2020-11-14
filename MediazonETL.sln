@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30503.244
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{159641D6-6404-4A2A-AE62-294DE0FE8301}") = "MediazonETL", "MediazonETL.dtproj", "{175B66A6-FF85-4456-9B8A-665FDE53F356}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Development|Default = Development|Default
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{175B66A6-FF85-4456-9B8A-665FDE53F356}.Development|Default.ActiveCfg = Development
+		{175B66A6-FF85-4456-9B8A-665FDE53F356}.Development|Default.Build.0 = Development
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A535CFDC-E3C9-4EF7-8D67-55D835777980}
+	EndGlobalSection
+EndGlobal
