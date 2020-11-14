@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="26"
-  DTS:VersionGUID="{A0040BE0-6E01-42F8-B703-4C58696421C4}">
+  DTS:VersionBuild="31"
+  DTS:VersionGUID="{C6DE7320-0E22-40A9-A300-1CEECE9E8ECC}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -6484,6 +6484,11 @@ where [refTable].[code] = ?</property>
                       cachedName="order_date"
                       lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_date]" />
                     <inputColumn
+                      refId="Package\ETL Ventes\Test Update Ventes.Inputs[Conditional Split Input].Columns[order_date (1)]"
+                      cachedDataType="i4"
+                      cachedName="order_date (1)"
+                      lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_date (1)]" />
+                    <inputColumn
                       refId="Package\ETL Ventes\Test Update Ventes.Inputs[Conditional Split Input].Columns[type_id]"
                       cachedDataType="i4"
                       cachedName="type_id"
@@ -6509,54 +6514,6 @@ where [refTable].[code] = ?</property>
                       cachedLength="255"
                       cachedName="sales"
                       lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[sales]" />
-                    <inputColumn
-                      refId="Package\ETL Ventes\Test Update Ventes.Inputs[Conditional Split Input].Columns[customer_id]"
-                      cachedDataType="i4"
-                      cachedName="customer_id"
-                      lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[customer_id]" />
-                    <inputColumn
-                      refId="Package\ETL Ventes\Test Update Ventes.Inputs[Conditional Split Input].Columns[warehouse_id]"
-                      cachedDataType="i4"
-                      cachedName="warehouse_id"
-                      lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[warehouse_id]" />
-                    <inputColumn
-                      refId="Package\ETL Ventes\Test Update Ventes.Inputs[Conditional Split Input].Columns[currency_id]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="currency_id"
-                      lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[currency_id]" />
-                    <inputColumn
-                      refId="Package\ETL Ventes\Test Update Ventes.Inputs[Conditional Split Input].Columns[product_id]"
-                      cachedDataType="i4"
-                      cachedName="product_id"
-                      cachedSortKeyPosition="2"
-                      lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[product_id]" />
-                    <inputColumn
-                      refId="Package\ETL Ventes\Test Update Ventes.Inputs[Conditional Split Input].Columns[customer_id (1)]"
-                      cachedDataType="i4"
-                      cachedName="customer_id (1)"
-                      lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[customer_id (1)]" />
-                    <inputColumn
-                      refId="Package\ETL Ventes\Test Update Ventes.Inputs[Conditional Split Input].Columns[order_date (1)]"
-                      cachedDataType="i4"
-                      cachedName="order_date (1)"
-                      lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_date (1)]" />
-                    <inputColumn
-                      refId="Package\ETL Ventes\Test Update Ventes.Inputs[Conditional Split Input].Columns[warehouse_id (1)]"
-                      cachedDataType="i4"
-                      cachedName="warehouse_id (1)"
-                      lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[warehouse_id (1)]" />
-                    <inputColumn
-                      refId="Package\ETL Ventes\Test Update Ventes.Inputs[Conditional Split Input].Columns[currency_id (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="currency_id (1)"
-                      lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[currency_id (1)]" />
-                    <inputColumn
-                      refId="Package\ETL Ventes\Test Update Ventes.Inputs[Conditional Split Input].Columns[product_id (1)]"
-                      cachedDataType="i4"
-                      cachedName="product_id (1)"
-                      lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[product_id (1)]" />
                     <inputColumn
                       refId="Package\ETL Ventes\Test Update Ventes.Inputs[Conditional Split Input].Columns[type_id (1)]"
                       cachedDataType="i4"
@@ -6602,13 +6559,13 @@ where [refTable].[code] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">(#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[customer_id]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[customer_id (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_date]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_date (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[warehouse_id]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[warehouse_id (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[product_id]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[product_id (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[type_id]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[type_id (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[currency_id]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[currency_id (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[qty]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[qty (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[price]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[price (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[price_excl]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[price_excl (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[sales]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[sales (1)]})</property>
+                      name="Expression">(#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_date]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_date (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[type_id]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[type_id (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[qty]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[qty (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[price]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[price (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[price_excl]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[price_excl (1)]}) || (#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[sales]} != #{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[sales (1)]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">(customer_id != [customer_id (1)]) || (order_date != [order_date (1)]) || (warehouse_id != [warehouse_id (1)]) || (product_id != [product_id (1)]) || (type_id != [type_id (1)]) || (currency_id != [currency_id (1)]) || (qty != [qty (1)]) || (price != [price (1)]) || (price_excl != [price_excl (1)]) || (sales != [sales (1)])</property>
+                      name="FriendlyExpression">(order_date != [order_date (1)]) || (type_id != [type_id (1)]) || (qty != [qty (1)]) || (price != [price (1)]) || (price_excl != [price_excl (1)]) || (sales != [sales (1)])</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -7416,6 +7373,17 @@ where [refTable].[code] = ?</property>
                       cachedLength="15"
                       cachedName="order_code_DWH"
                       lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_code_DWH]" />
+                    <inputColumn
+                      refId="Package\ETL Ventes\UPSERT Ventes.Inputs[Conditional Split Input].Columns[product_id]"
+                      cachedDataType="i4"
+                      cachedName="product_id"
+                      cachedSortKeyPosition="2"
+                      lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[product_id]" />
+                    <inputColumn
+                      refId="Package\ETL Ventes\UPSERT Ventes.Inputs[Conditional Split Input].Columns[product_id (1)]"
+                      cachedDataType="i4"
+                      cachedName="product_id (1)"
+                      lineageId="Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[product_id (1)]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -7435,13 +7403,13 @@ where [refTable].[code] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">![ISNULL](#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_code]}) &amp;&amp; [ISNULL](#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_code_DWH]})</property>
+                      name="Expression">![ISNULL](#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_code]}) &amp;&amp; ![ISNULL](#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[product_id]}) &amp;&amp; [ISNULL](#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_code_DWH]}) &amp;&amp; [ISNULL](#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[product_id (1)]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">!ISNULL(order_code) &amp;&amp; ISNULL(order_code_DWH)</property>
+                      name="FriendlyExpression">!ISNULL(order_code) &amp;&amp; !ISNULL(product_id) &amp;&amp; ISNULL(order_code_DWH) &amp;&amp; ISNULL([product_id (1)])</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -7463,13 +7431,13 @@ where [refTable].[code] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">![ISNULL](#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_code]}) &amp;&amp; ![ISNULL](#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_code_DWH]})</property>
+                      name="Expression">![ISNULL](#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_code]}) &amp;&amp; ![ISNULL](#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[product_id]}) &amp;&amp; ![ISNULL](#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[order_code_DWH]}) &amp;&amp; ![ISNULL](#{Package\ETL Ventes\Merge Join.Outputs[Merge Join Output].Columns[product_id (1)]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">!ISNULL(order_code) &amp;&amp; !ISNULL(order_code_DWH)</property>
+                      name="FriendlyExpression">!ISNULL(order_code) &amp;&amp; !ISNULL(product_id) &amp;&amp; !ISNULL(order_code_DWH) &amp;&amp; !ISNULL([product_id (1)])</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -7941,7 +7909,7 @@ where [refTable].[code] = ?</property>
     design-time-name="Package\Chargement staging Commandes">
     <LayoutInfo>
       <GraphLayout
-        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="159.2,41.6"
           Id="Package\Chargement staging Commandes\STG Commandes"
@@ -7981,9 +7949,7 @@ where [refTable].[code] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="0,0,0,0"
-              RelativePosition="Any" />
+            <EdgeLabelCollection />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
@@ -8399,7 +8365,9 @@ where [refTable].[code] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8433,7 +8401,9 @@ where [refTable].[code] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8455,7 +8425,9 @@ where [refTable].[code] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8477,7 +8449,9 @@ where [refTable].[code] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8511,7 +8485,9 @@ where [refTable].[code] = ?</property>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
-            <EdgeLabelCollection />
+            <mssgm:EdgeLabel
+              BoundingBox="0,0,0,0"
+              RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
@@ -8655,13 +8631,13 @@ where [refTable].[code] = ?</property>
       <GraphLayout
         Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="158.4,41.6"
-          Id="Package\ETL Ventes\DHW Ventes join"
-          TopLeft="443.809531367555,55.058824301591" />
-        <NodeLayout
           Size="148.8,41.6"
           Id="Package\ETL Ventes\Lookup produit"
           TopLeft="77.7142870377522,370.729416964046" />
+        <NodeLayout
+          Size="170.4,41.6"
+          Id="Package\ETL Ventes\Test Update Ventes"
+          TopLeft="690.00001175063,624.000008751364" />
         <NodeLayout
           Size="151.2,41.6"
           Id="Package\ETL Ventes\UPSERT Ventes"
@@ -8671,17 +8647,17 @@ where [refTable].[code] = ?</property>
           Id="Package\ETL Ventes\Lookup warehouse"
           TopLeft="57.6,188.8" />
         <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\ETL Ventes\Merge Join"
-          TopLeft="348.571434507565,500.882359965862" />
+          Size="140.8,41.6"
+          Id="Package\ETL Ventes\Lookup client"
+          TopLeft="40,111.2" />
         <NodeLayout
           Size="137.6,41.6"
           Id="Package\ETL Ventes\DWH Ventes"
           TopLeft="366.428577668813,798.352952373069" />
         <NodeLayout
-          Size="140.8,41.6"
-          Id="Package\ETL Ventes\Lookup client"
-          TopLeft="40,111.2" />
+          Size="153.6,41.6"
+          Id="Package\ETL Ventes\Tri DHW Ventes"
+          TopLeft="455.238102990754,144.000001944748" />
         <NodeLayout
           Size="132.8,41.6"
           Id="Package\ETL Ventes\STG Ventes"
@@ -8691,17 +8667,21 @@ where [refTable].[code] = ?</property>
           Id="Package\ETL Ventes\Lookup devise"
           TopLeft="63.2,284" />
         <NodeLayout
+          Size="158.4,41.6"
+          Id="Package\ETL Ventes\DHW Ventes join"
+          TopLeft="443.809531367555,55.058824301591" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\ETL Ventes\Merge Join"
+          TopLeft="348.571434507565,500.882359965862" />
+        <NodeLayout
+          Size="180,41.6"
+          Id="Package\ETL Ventes\DHW UPDATE Ventes"
+          TopLeft="697.714297596289,715.341184012205" />
+        <NodeLayout
           Size="148.8,41.6"
           Id="Package\ETL Ventes\Tri STG Ventes"
           TopLeft="80.9523823309918,445.803927746061" />
-        <NodeLayout
-          Size="153.6,41.6"
-          Id="Package\ETL Ventes\Tri DHW Ventes"
-          TopLeft="455.238102990754,144.000001944748" />
-        <NodeLayout
-          Size="170.4,41.6"
-          Id="Package\ETL Ventes\Test Update Ventes"
-          TopLeft="690.00001175063,624.000008751364" />
         <EdgeLayout
           Id="Package\ETL Ventes.Paths[update]"
           TopLeft="559.057149802909,619.564714279802">
@@ -9052,62 +9032,45 @@ where [refTable].[code] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="180,41.6"
-          Id="Package\ETL Ventes\DHW UPDATE Ventes"
-          TopLeft="697.714297596289,715.341184012205" />
         <EdgeLayout
           Id="Package\ETL Ventes.Paths[update1]"
           TopLeft="775.20001175063,665.600008751364">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="12.5142858456593,49.7411752608413"
+              EndConnector="12.5142858456589,49.7411752608409"
               Start="0,0"
-              End="12.5142858456593,42.2411752608413">
+              End="12.5142858456589,42.2411752608409">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,20.8705876304206" />
+                    End="0,20.8705876304205" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,20.8705876304206"
-                    Point2="0,24.8705876304206"
-                    Point3="4,24.8705876304206" />
+                    Point1="0,20.8705876304205"
+                    Point2="0,24.8705876304205"
+                    Point3="4,24.8705876304205" />
                   <mssgle:LineSegment
-                    End="8.51428584565929,24.8705876304206" />
+                    End="8.51428584565895,24.8705876304205" />
                   <mssgle:CubicBezierSegment
-                    Point1="8.51428584565929,24.8705876304206"
-                    Point2="12.5142858456593,24.8705876304206"
-                    Point3="12.5142858456593,28.8705876304206" />
+                    Point1="8.51428584565895,24.8705876304205"
+                    Point2="12.5142858456589,24.8705876304205"
+                    Point3="12.5142858456589,28.8705876304205" />
                   <mssgle:LineSegment
-                    End="12.5142858456593,42.2411752608413" />
+                    End="12.5142858456589,42.2411752608409" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-9.54535707717036,29.8705876304206,31.605,11.609375"
+              BoundingBox="-9.54535707717053,29.8705876304205,31.605,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
       </GraphLayout>
     </LayoutInfo>
   </TaskHost>
-  <PipelineComponentMetadata
-    design-time-name="Package\ETL Ventes\DHW Ventes join">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
   <PipelineComponentMetadata
     design-time-name="Package\ETL Ventes\Lookup produit">
     <Properties>
@@ -9155,19 +9118,6 @@ where [refTable].[code] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\ETL Ventes\DWH Ventes">
-    <Properties>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q2:string">Table</Value>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
     design-time-name="Package\ETL Ventes\Lookup client">
     <Properties>
       <Property>
@@ -9187,6 +9137,19 @@ where [refTable].[code] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Ventes\DWH Ventes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -9223,6 +9186,19 @@ where [refTable].[code] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Ventes\DHW Ventes join">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
