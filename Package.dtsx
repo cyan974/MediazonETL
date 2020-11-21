@@ -11,8 +11,8 @@
   DTS:LocaleID="1033"
   DTS:ObjectName="Package"
   DTS:PackageType="5"
-  DTS:VersionBuild="60"
-  DTS:VersionGUID="{22B6FC1C-667B-4DB5-9EBB-48C4CB63CE81}">
+  DTS:VersionBuild="67"
+  DTS:VersionGUID="{81E81EBB-CCE9-451E-8273-EBF9F9570694}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:ConnectionManagers>
@@ -5158,14 +5158,42 @@
                       name="amount"
                       truncationRowDisposition="FailComponent" />
                     <outputColumn
-                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[shipping]"
-                      dataType="wstr"
+                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[shipping_id]"
+                      dataType="i4"
                       errorOrTruncationOperation="Conversion"
                       errorRowDisposition="FailComponent"
-                      externalMetadataColumnId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].ExternalColumns[shipping]"
-                      length="10"
-                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[shipping]"
-                      name="shipping"
+                      externalMetadataColumnId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].ExternalColumns[shipping_id]"
+                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[shipping_id]"
+                      name="shipping_id"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[delivery_date]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].ExternalColumns[delivery_date]"
+                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[delivery_date]"
+                      name="delivery_date"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[delivery_time]"
+                      dataType="i4"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].ExternalColumns[delivery_time]"
+                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[delivery_time]"
+                      name="delivery_time"
+                      truncationRowDisposition="FailComponent" />
+                    <outputColumn
+                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[shipping_price]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Conversion"
+                      errorRowDisposition="FailComponent"
+                      externalMetadataColumnId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].ExternalColumns[shipping_price]"
+                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[shipping_price]"
+                      name="shipping_price"
+                      precision="6"
+                      scale="2"
                       truncationRowDisposition="FailComponent" />
                   </outputColumns>
                   <externalMetadataColumns
@@ -5210,6 +5238,24 @@
                       dataType="wstr"
                       length="10"
                       name="shipping" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].ExternalColumns[shipping_id]"
+                      dataType="i4"
+                      name="shipping_id" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].ExternalColumns[delivery_date]"
+                      dataType="i4"
+                      name="delivery_date" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].ExternalColumns[delivery_time]"
+                      dataType="i4"
+                      name="delivery_time" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].ExternalColumns[shipping_price]"
+                      dataType="numeric"
+                      name="shipping_price"
+                      precision="6"
+                      scale="2" />
                   </externalMetadataColumns>
                 </output>
                 <output
@@ -5261,11 +5307,27 @@
                       lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Error Output].Columns[amount]"
                       name="amount" />
                     <outputColumn
-                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Error Output].Columns[shipping]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Error Output].Columns[shipping]"
-                      name="shipping" />
+                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Error Output].Columns[shipping_id]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Error Output].Columns[shipping_id]"
+                      name="shipping_id" />
+                    <outputColumn
+                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Error Output].Columns[delivery_date]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Error Output].Columns[delivery_date]"
+                      name="delivery_date" />
+                    <outputColumn
+                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Error Output].Columns[delivery_time]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Error Output].Columns[delivery_time]"
+                      name="delivery_time" />
+                    <outputColumn
+                      refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Error Output].Columns[shipping_price]"
+                      dataType="numeric"
+                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Error Output].Columns[shipping_price]"
+                      name="shipping_price"
+                      precision="6"
+                      scale="2" />
                     <outputColumn
                       refId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Error Output].Columns[ErrorCode]"
                       dataType="i4"
@@ -5389,13 +5451,6 @@
                       externalMetadataColumnId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].ExternalColumns[amount]"
                       lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[amount]" />
                     <inputColumn
-                      refId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].Columns[shipping]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="shipping"
-                      externalMetadataColumnId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].ExternalColumns[shipping]"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping]" />
-                    <inputColumn
                       refId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].Columns[customer_id]"
                       cachedDataType="i4"
                       cachedName="customer_id"
@@ -5414,6 +5469,32 @@
                       cachedName="currency_id"
                       externalMetadataColumnId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].ExternalColumns[currency_id]"
                       lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[currency_id]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].Columns[shipping_id]"
+                      cachedDataType="i4"
+                      cachedName="shipping_id"
+                      externalMetadataColumnId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].ExternalColumns[shipping_id]"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_id]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].Columns[delivery_date_int]"
+                      cachedDataType="i4"
+                      cachedName="delivery_date_int"
+                      externalMetadataColumnId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].ExternalColumns[delivery_date]"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[delivery_date_int]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].Columns[delivery_time]"
+                      cachedDataType="i4"
+                      cachedName="delivery_time"
+                      externalMetadataColumnId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].ExternalColumns[delivery_time]"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[delivery_time]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].Columns[shipping_price]"
+                      cachedDataType="numeric"
+                      cachedName="shipping_price"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].ExternalColumns[shipping_price]"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_price]" />
                   </inputColumns>
                   <externalMetadataColumns
                     isUsed="True">
@@ -5457,6 +5538,24 @@
                       dataType="wstr"
                       length="10"
                       name="shipping" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].ExternalColumns[shipping_id]"
+                      dataType="i4"
+                      name="shipping_id" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].ExternalColumns[delivery_date]"
+                      dataType="i4"
+                      name="delivery_date" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].ExternalColumns[delivery_time]"
+                      dataType="i4"
+                      name="delivery_time" />
+                    <externalMetadataColumn
+                      refId="Package\ETL Commandes\DWH Commandes.Inputs[OLE DB Destination Input].ExternalColumns[shipping_price]"
+                      dataType="numeric"
+                      name="shipping_price"
+                      precision="6"
+                      scale="2" />
                   </externalMetadataColumns>
                 </input>
               </inputs>
@@ -5504,14 +5603,11 @@
                   expressionType="Notify"
                   name="SqlCommand"
                   UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">UPDATE FaitsCommandes SET
-[customer_id] = ?,
-[order_date] = ?,
 [shipping_date] = ?,
-[warehouse_id] = ?,
-[currency_id] = ?,
-[items] = ?,
-[amount] = ?,
-[shipping] = ?
+[shipping_id] = ?,
+[delivery_date] = ?,
+[delivery_time] = ?,
+[shipping_price] = ?
 WHERE [order_code] = ?</property>
                 <property
                   dataType="System.Int32"
@@ -5535,55 +5631,37 @@ WHERE [order_code] = ?</property>
                   name="OLE DB Command Input">
                   <inputColumns>
                     <inputColumn
-                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].Columns[customer_id]"
-                      cachedDataType="i4"
-                      cachedName="customer_id"
-                      externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[customer_id]" />
-                    <inputColumn
                       refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].Columns[shipping_date]"
                       cachedDataType="i4"
                       cachedName="shipping_date"
-                      externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_0]"
                       lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_date]" />
                     <inputColumn
-                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].Columns[warehouse_id]"
+                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].Columns[shipping_id]"
                       cachedDataType="i4"
-                      cachedName="warehouse_id"
-                      externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[warehouse_id]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].Columns[currency_id]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="currency_id"
-                      externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[currency_id]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].Columns[items]"
-                      cachedDataType="i4"
-                      cachedName="items"
-                      externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[items]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].Columns[amount]"
-                      cachedDataType="r8"
-                      cachedName="amount"
-                      externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[amount]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].Columns[shipping]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="shipping"
-                      externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].Columns[order_date]"
-                      cachedDataType="i4"
-                      cachedName="order_date"
+                      cachedName="shipping_id"
                       externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_1]"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[order_date]" />
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_id]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].Columns[delivery_date_int]"
+                      cachedDataType="i4"
+                      cachedName="delivery_date_int"
+                      externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_2]"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[delivery_date_int]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].Columns[delivery_time]"
+                      cachedDataType="i4"
+                      cachedName="delivery_time"
+                      externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_3]"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[delivery_time]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].Columns[shipping_price]"
+                      cachedDataType="numeric"
+                      cachedName="shipping_price"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_price]" />
                     <inputColumn
                       refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].Columns[order_code]"
                       cachedCodepage="1252"
@@ -5591,7 +5669,7 @@ WHERE [order_code] = ?</property>
                       cachedLength="15"
                       cachedName="order_code"
                       cachedSortKeyPosition="1"
-                      externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
+                      externalMetadataColumnId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
                       lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[order_code]" />
                   </inputColumns>
                   <externalMetadataColumns
@@ -5642,9 +5720,10 @@ WHERE [order_code] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_4]"
-                      dataType="wstr"
-                      length="3"
-                      name="Param_4">
+                      dataType="numeric"
+                      name="Param_4"
+                      precision="6"
+                      scale="2">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -5654,49 +5733,15 @@ WHERE [order_code] = ?</property>
                     </externalMetadataColumn>
                     <externalMetadataColumn
                       refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_5]"
-                      dataType="i4"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
                       name="Param_5">
                       <properties>
                         <property
                           dataType="System.Int32"
                           description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
                           name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_6]"
-                      dataType="r8"
-                      name="Param_6">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">81</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_7]"
-                      dataType="wstr"
-                      length="10"
-                      name="Param_7">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
-                      </properties>
-                    </externalMetadataColumn>
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input].ExternalColumns[Param_8]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      name="Param_8">
-                      <properties>
-                        <property
-                          dataType="System.Int32"
-                          description="Parameter information.  Matches OLE DB's DBPARAMFLAGSENUM values."
-                          name="DBParamInfoFlags">65</property>
                       </properties>
                     </externalMetadataColumn>
                   </externalMetadataColumns>
@@ -5733,256 +5778,6 @@ WHERE [order_code] = ?</property>
                   <externalMetadataColumns />
                 </output>
               </outputs>
-            </component>
-            <component
-              refId="Package\ETL Commandes\Flat File Destination"
-              componentClassID="Microsoft.FlatFileDestination"
-              contactInfo="Flat File Destination;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
-              description="Flat File Destination"
-              localeId="1033"
-              name="Flat File Destination">
-              <properties>
-                <property
-                  dataType="System.Boolean"
-                  description="Specifies whether the data will overwrite or append to the destination file."
-                  name="Overwrite">true</property>
-                <property
-                  dataType="System.Null"
-                  description="Specifies the text to write to the destination file before any data is written."
-                  expressionType="Notify"
-                  name="Header" />
-                <property
-                  dataType="System.Boolean"
-                  description="When text qualifier is enabled, specifies whether the text qualifier in the data written to the destination file will be escaped or not."
-                  name="EscapeQualifier">false</property>
-              </properties>
-              <connections>
-                <connection
-                  refId="Package\ETL Commandes\Flat File Destination.Connections[FlatFileConnection]"
-                  connectionManagerID="Package.ConnectionManagers[FaitsCommandes]"
-                  connectionManagerRefId="Package.ConnectionManagers[FaitsCommandes]"
-                  name="FlatFileConnection" />
-              </connections>
-              <inputs>
-                <input
-                  refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input]"
-                  hasSideEffects="true"
-                  name="Flat File Destination Input">
-                  <inputColumns>
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[order_code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="15"
-                      cachedName="order_code"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[order_code]"
-                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[order_code]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[customer]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="customer"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[customer]"
-                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[customer]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[order_date]"
-                      cachedDataType="i4"
-                      cachedName="order_date"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[order_date]"
-                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[order_date]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[shipping_date]"
-                      cachedDataType="i4"
-                      cachedName="shipping_date"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[shipping_date]"
-                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[shipping_date]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[warehouse]"
-                      cachedDataType="wstr"
-                      cachedLength="1"
-                      cachedName="warehouse"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[warehouse]"
-                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[warehouse]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[currency]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="currency"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[currency]"
-                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[currency]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[items]"
-                      cachedDataType="i4"
-                      cachedName="items"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[items]"
-                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[items]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[amount]"
-                      cachedDataType="r8"
-                      cachedName="amount"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[amount]"
-                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[amount]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[shipping]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="shipping"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[shipping]"
-                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[shipping]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[customer_id]"
-                      cachedDataType="i4"
-                      cachedName="customer_id"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[customer_id]"
-                      lineageId="Package\ETL Commandes\Lookup client.Outputs[Lookup Match Output].Columns[customer_id]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[warehouse_id]"
-                      cachedDataType="i4"
-                      cachedName="warehouse_id"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[warehouse_id]"
-                      lineageId="Package\ETL Commandes\Lookup warehouse.Outputs[Lookup Match Output].Columns[warehouse_id]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[currency_id]"
-                      cachedDataType="wstr"
-                      cachedLength="3"
-                      cachedName="currency_id"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[currency_id]"
-                      lineageId="Package\ETL Commandes\Lookup devise.Outputs[Lookup Match Output].Columns[currency_id]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[shipping_code]"
-                      cachedCodepage="1252"
-                      cachedDataType="str"
-                      cachedLength="10"
-                      cachedName="shipping_code"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[shipping_code]"
-                      lineageId="Package\ETL Commandes\Conversion Shipping.Outputs[Data Conversion Output].Columns[shipping_code]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[shipping_id]"
-                      cachedDataType="i4"
-                      cachedName="shipping_id"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[shipping_id]"
-                      lineageId="Package\ETL Commandes\Lookup shipping.Outputs[Lookup Match Output].Columns[shipping_id]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[delivery_time]"
-                      cachedDataType="i4"
-                      cachedName="delivery_time"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[delivery_time]"
-                      lineageId="Package\ETL Commandes\Lookup shipping.Outputs[Lookup Match Output].Columns[delivery_time]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[delivery_last_dow]"
-                      cachedDataType="i4"
-                      cachedName="delivery_last_dow"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[delivery_last_dow]"
-                      lineageId="Package\ETL Commandes\Lookup shipping.Outputs[Lookup Match Output].Columns[delivery_last_dow]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[shipping_date_date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="shipping_date_date"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[shipping_date_date]"
-                      lineageId="Package\ETL Commandes\Lookup shippingDate.Outputs[Lookup Match Output].Columns[shipping_date_date]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[delivery_date]"
-                      cachedDataType="dbTimeStamp"
-                      cachedName="delivery_date"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[delivery_date]"
-                      lineageId="Package\ETL Commandes\Calcul delivery_date.Outputs[Derived Column Output].Columns[delivery_date]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].Columns[delivery_date_int]"
-                      cachedDataType="i4"
-                      cachedName="delivery_date_int"
-                      externalMetadataColumnId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[delivery_date_int]"
-                      lineageId="Package\ETL Commandes\Transformation delivery_date INT.Outputs[Derived Column Output].Columns[delivery_date_int]" />
-                  </inputColumns>
-                  <externalMetadataColumns
-                    isUsed="True">
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[order_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="15"
-                      name="order_code" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[customer]"
-                      dataType="wstr"
-                      length="10"
-                      name="customer" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[order_date]"
-                      dataType="i4"
-                      name="order_date" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[shipping_date]"
-                      dataType="i4"
-                      name="shipping_date" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[warehouse]"
-                      dataType="wstr"
-                      length="1"
-                      name="warehouse" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[currency]"
-                      dataType="wstr"
-                      length="3"
-                      name="currency" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[items]"
-                      dataType="i4"
-                      name="items" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[amount]"
-                      dataType="r8"
-                      name="amount" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[shipping]"
-                      dataType="wstr"
-                      length="10"
-                      name="shipping" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[customer_id]"
-                      dataType="i4"
-                      name="customer_id" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[warehouse_id]"
-                      dataType="i4"
-                      name="warehouse_id" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[currency_id]"
-                      dataType="wstr"
-                      length="3"
-                      name="currency_id" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[shipping_code]"
-                      codePage="1252"
-                      dataType="str"
-                      length="10"
-                      name="shipping_code" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[shipping_id]"
-                      dataType="i4"
-                      name="shipping_id" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[delivery_time]"
-                      dataType="i4"
-                      name="delivery_time" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[delivery_last_dow]"
-                      dataType="i4"
-                      name="delivery_last_dow" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[shipping_date_date]"
-                      dataType="dbTimeStamp"
-                      name="shipping_date_date" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[delivery_date]"
-                      dataType="dbTimeStamp"
-                      name="delivery_date" />
-                    <externalMetadataColumn
-                      refId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input].ExternalColumns[delivery_date_int]"
-                      dataType="i4"
-                      name="delivery_date_int" />
-                  </externalMetadataColumns>
-                </input>
-              </inputs>
             </component>
             <component
               refId="Package\ETL Commandes\Lookup client"
@@ -6650,6 +6445,184 @@ where [refTable].[Temps_PK] = ?</property>
               </outputs>
             </component>
             <component
+              refId="Package\ETL Commandes\Lookup ShippingPrices"
+              componentClassID="Microsoft.Lookup"
+              contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
+              description="Joins additional columns to the data flow by looking up values in a table. For example, join to the 'employee id' column the employees table to get 'hire date' and 'employee name'. We recommend this transformation when the lookup table can fit into memory."
+              name="Lookup ShippingPrices"
+              usesDispositions="true"
+              version="6">
+              <properties>
+                <property
+                  dataType="System.String"
+                  description="Specifies the SQL statement that generates the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommand"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select * from [dbo].[DimShippingPrices]</property>
+                <property
+                  dataType="System.String"
+                  description="Specifies a SQL statement that uses parameters to generate the lookup table."
+                  expressionType="Notify"
+                  name="SqlCommandParam"
+                  UITypeEditor="Microsoft.DataTransformationServices.Controls.ModalMultilineStringEditor, Microsoft.DataTransformationServices.Controls, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91">select TOP 1 * from (select * from [dbo].[DimShippingPrices]) [refTable]
+where [refTable].[update_date] &lt;= ? and [refTable].[service] = ? ORDER BY [refTable].[update_date] DESC</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the type of connection used to access the reference dataset."
+                  name="ConnectionType"
+                  typeConverter="LookupConnectionType">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the cache type of the lookup table."
+                  name="CacheType"
+                  typeConverter="CacheType">1</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies how the Lookup transformation handles rows without matching entries in the reference data set."
+                  name="NoMatchBehavior"
+                  typeConverter="LookupNoMatchBehavior">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the percentage of the cache that is allocated for rows with no matching entries in the reference dataset."
+                  name="NoMatchCachePercentage">0</property>
+                <property
+                  dataType="System.Int32"
+                  description="Maximum Memory Usage for Reference Cache on a 32 bit platform."
+                  name="MaxMemoryUsage">25</property>
+                <property
+                  dataType="System.Int64"
+                  description="Maximum Memory Usage for Reference Cache on a 64 bit platform."
+                  name="MaxMemoryUsage64">25</property>
+                <property
+                  dataType="System.String"
+                  description="Indicates whether to reference metadata in an XML format."
+                  name="ReferenceMetadataXml">&lt;referenceMetadata&gt;&lt;referenceColumns&gt;&lt;referenceColumn name="id" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;referenceColumn name="service" dataType="DT_STR" length="5" precision="0" scale="0" codePage="1252"/&gt;&lt;referenceColumn name="price" dataType="DT_NUMERIC" length="0" precision="6" scale="2" codePage="0"/&gt;&lt;referenceColumn name="update_date" dataType="DT_I4" length="0" precision="0" scale="0" codePage="0"/&gt;&lt;/referenceColumns&gt;&lt;/referenceMetadata&gt;</property>
+                <property
+                  containsID="true"
+                  dataType="System.String"
+                  description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
+                  name="ParameterMap">#{Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[shipping_date]};#{Package\ETL Commandes\Conversion Shipping.Outputs[Data Conversion Output].Columns[shipping_code]};</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the column code page to use when code page information is unavailable from the data source."
+                  name="DefaultCodePage">1252</property>
+                <property
+                  dataType="System.Boolean"
+                  description="Determines whether duplicate keys in the reference data should be treated as errors when full cache mode is used."
+                  name="TreatDuplicateKeysAsError">false</property>
+              </properties>
+              <connections>
+                <connection
+                  refId="Package\ETL Commandes\Lookup ShippingPrices.Connections[OleDbConnection]"
+                  connectionManagerID="{94FC2921-400B-4620-BE80-773FAD75E104}:external"
+                  connectionManagerRefId="Project.ConnectionManagers[WServer2019.MediazonDWH]"
+                  description="Connection manager used to access lookup data."
+                  name="OleDbConnection" />
+              </connections>
+              <inputs>
+                <input
+                  refId="Package\ETL Commandes\Lookup ShippingPrices.Inputs[Lookup Input]"
+                  name="Lookup Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Lookup ShippingPrices.Inputs[Lookup Input].Columns[shipping_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="10"
+                      cachedName="shipping_code"
+                      lineageId="Package\ETL Commandes\Conversion Shipping.Outputs[Data Conversion Output].Columns[shipping_code]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">service</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Lookup ShippingPrices.Inputs[Lookup Input].Columns[shipping_date]"
+                      cachedDataType="i4"
+                      cachedName="shipping_date"
+                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[shipping_date]">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table that a column joins."
+                          name="JoinToReferenceColumn">update_date</property>
+                        <property
+                          dataType="System.Null"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn" />
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Commandes\Lookup ShippingPrices.Outputs[Lookup Match Output]"
+                  errorOrTruncationOperation="Lookup"
+                  errorRowDisposition="FailComponent"
+                  exclusionGroup="1"
+                  name="Lookup Match Output"
+                  synchronousInputId="Package\ETL Commandes\Lookup ShippingPrices.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Lookup ShippingPrices.Outputs[Lookup Match Output].Columns[shipping_price]"
+                      dataType="numeric"
+                      errorOrTruncationOperation="Copy Column"
+                      lineageId="Package\ETL Commandes\Lookup ShippingPrices.Outputs[Lookup Match Output].Columns[shipping_price]"
+                      name="shipping_price"
+                      precision="6"
+                      scale="2"
+                      truncationRowDisposition="FailComponent">
+                      <properties>
+                        <property
+                          dataType="System.String"
+                          description="Specifies the column in the reference table from which a column is copied."
+                          name="CopyFromReferenceColumn">price</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Commandes\Lookup ShippingPrices.Outputs[Lookup No Match Output]"
+                  description="The Lookup output that handles rows with no matching entries in the reference dataset. Use this output when the NoMatchBehavior property is set to &quot;Send rows with no matching entries to the no match output.&quot;"
+                  exclusionGroup="1"
+                  name="Lookup No Match Output"
+                  synchronousInputId="Package\ETL Commandes\Lookup ShippingPrices.Inputs[Lookup Input]">
+                  <externalMetadataColumns />
+                </output>
+                <output
+                  refId="Package\ETL Commandes\Lookup ShippingPrices.Outputs[Lookup Error Output]"
+                  exclusionGroup="1"
+                  isErrorOut="true"
+                  name="Lookup Error Output"
+                  synchronousInputId="Package\ETL Commandes\Lookup ShippingPrices.Inputs[Lookup Input]">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Lookup ShippingPrices.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Lookup ShippingPrices.Outputs[Lookup Error Output].Columns[ErrorCode]"
+                      name="ErrorCode"
+                      specialFlags="1" />
+                    <outputColumn
+                      refId="Package\ETL Commandes\Lookup ShippingPrices.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Lookup ShippingPrices.Outputs[Lookup Error Output].Columns[ErrorColumn]"
+                      name="ErrorColumn"
+                      specialFlags="2" />
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
               refId="Package\ETL Commandes\Lookup warehouse"
               componentClassID="Microsoft.Lookup"
               contactInfo="Lookup;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;6"
@@ -6847,49 +6820,65 @@ where [refTable].[code] = ?</property>
                       cachedLength="15"
                       cachedName="order_code"
                       cachedSortKeyPosition="1"
-                      lineageId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[customer_id]" />
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[order_code]" />
                     <inputColumn
                       refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[order_date]"
                       cachedDataType="i4"
                       cachedName="order_date"
-                      lineageId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[shipping_date]" />
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[order_date]" />
                     <inputColumn
                       refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[shipping_date]"
                       cachedDataType="i4"
                       cachedName="shipping_date"
-                      lineageId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[currency_id]" />
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[shipping_date]" />
                     <inputColumn
                       refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[items]"
                       cachedDataType="i4"
                       cachedName="items"
-                      lineageId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[amount]" />
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[items]" />
                     <inputColumn
                       refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[amount]"
                       cachedDataType="r8"
                       cachedName="amount"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[shipping]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="shipping"
-                      lineageId="Package\ETL Commandes\414:invalid" />
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[amount]" />
                     <inputColumn
                       refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[customer_id]"
                       cachedDataType="i4"
                       cachedName="customer_id"
-                      lineageId="Package\ETL Commandes\416:invalid" />
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[customer_id]" />
                     <inputColumn
                       refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[warehouse_id]"
                       cachedDataType="i4"
                       cachedName="warehouse_id"
-                      lineageId="Package\ETL Commandes\418:invalid" />
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[warehouse_id]" />
                     <inputColumn
                       refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[currency_id]"
                       cachedDataType="wstr"
                       cachedLength="3"
                       cachedName="currency_id"
-                      lineageId="Package\ETL Commandes\420:invalid" />
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[currency_id]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[shipping_id]"
+                      cachedDataType="i4"
+                      cachedName="shipping_id"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[shipping_id]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[delivery_time]"
+                      cachedDataType="i4"
+                      cachedName="delivery_time"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[delivery_time]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[shipping_price]"
+                      cachedDataType="numeric"
+                      cachedName="shipping_price"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[shipping_price]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[delivery_date_int]"
+                      cachedDataType="i4"
+                      cachedName="delivery_date_int"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[delivery_date_int]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -6943,11 +6932,27 @@ where [refTable].[code] = ?</property>
                       cachedName="amount"
                       lineageId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[amount]" />
                     <inputColumn
-                      refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[shipping]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="shipping"
-                      lineageId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[shipping]" />
+                      refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[shipping_id]"
+                      cachedDataType="i4"
+                      cachedName="shipping_id"
+                      lineageId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[shipping_id]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[delivery_date]"
+                      cachedDataType="i4"
+                      cachedName="delivery_date"
+                      lineageId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[delivery_date]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[shipping_price]"
+                      cachedDataType="numeric"
+                      cachedName="shipping_price"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      lineageId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[shipping_price]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[delivery_time]"
+                      cachedDataType="i4"
+                      cachedName="delivery_time"
+                      lineageId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[delivery_time]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -7027,20 +7032,6 @@ where [refTable].[code] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping]"
-                      name="shipping">
-                      <properties>
-                        <property
-                          containsID="true"
-                          dataType="System.Int32"
-                          description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[shipping]}</property>
-                      </properties>
-                    </outputColumn>
-                    <outputColumn
                       refId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[customer_id]"
                       dataType="i4"
                       lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[customer_id]"
@@ -7078,6 +7069,32 @@ where [refTable].[code] = ?</property>
                           dataType="System.Int32"
                           description="The input column associated with this output column"
                           name="InputColumnID">#{Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[currency_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_id]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_id]"
+                      name="shipping_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[shipping_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[delivery_time]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[delivery_time]"
+                      name="delivery_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[delivery_time]}</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
@@ -7188,17 +7205,85 @@ where [refTable].[code] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping (1)]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping (1)]"
-                      name="shipping (1)">
+                      refId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_price]"
+                      dataType="numeric"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_price]"
+                      name="shipping_price"
+                      precision="6"
+                      scale="2">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="The input column associated with this output column"
-                          name="InputColumnID">#{Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[shipping]}</property>
+                          name="InputColumnID">#{Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[shipping_price]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_id (1)]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_id (1)]"
+                      name="shipping_id (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[shipping_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[delivery_date (1)]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[delivery_date (1)]"
+                      name="delivery_date (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[delivery_date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_price (1)]"
+                      dataType="numeric"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_price (1)]"
+                      name="shipping_price (1)"
+                      precision="6"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[shipping_price]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[delivery_time (1)]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[delivery_time (1)]"
+                      name="delivery_time (1)">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input].Columns[delivery_time]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[delivery_date_int]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[delivery_date_int]"
+                      name="delivery_date_int">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="The input column associated with this output column"
+                          name="InputColumnID">#{Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input].Columns[delivery_date_int]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -7493,23 +7578,6 @@ where [refTable].[code] = ?</property>
                       cachedName="shipping_date"
                       lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_date]" />
                     <inputColumn
-                      refId="Package\ETL Commandes\Test UPDATE.Inputs[Conditional Split Input].Columns[shipping]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="shipping"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Test UPDATE.Inputs[Conditional Split Input].Columns[shipping_date (1)]"
-                      cachedDataType="i4"
-                      cachedName="shipping_date (1)"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_date (1)]" />
-                    <inputColumn
-                      refId="Package\ETL Commandes\Test UPDATE.Inputs[Conditional Split Input].Columns[shipping (1)]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="shipping (1)"
-                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping (1)]" />
-                    <inputColumn
                       refId="Package\ETL Commandes\Test UPDATE.Inputs[Conditional Split Input].Columns[order_date]"
                       cachedDataType="i4"
                       cachedName="order_date"
@@ -7571,6 +7639,11 @@ where [refTable].[code] = ?</property>
                       cachedDataType="r8"
                       cachedName="amount (1)"
                       lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[amount (1)]" />
+                    <inputColumn
+                      refId="Package\ETL Commandes\Test UPDATE.Inputs[Conditional Split Input].Columns[shipping_date (1)]"
+                      cachedDataType="i4"
+                      cachedName="shipping_date (1)"
+                      lineageId="Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_date (1)]" />
                   </inputColumns>
                   <externalMetadataColumns />
                 </input>
@@ -7590,13 +7663,13 @@ where [refTable].[code] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the expression. This expression version uses lineage identifiers instead of column names."
-                      name="Expression">(#{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[order_date]} != #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[order_date (1)]} || (([ISNULL](#{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_date]}) ? 0 : #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_date]}) != ([ISNULL](#{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_date (1)]}) ? 0 : #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_date (1)]})) || #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[customer_id]} != #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[customer_id (1)]} || #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[warehouse_id]} != #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[warehouse_id (1)]} || #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[currency_id]} != #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[currency_id (1)]} || #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[items]} != #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[items (1)]} || #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[amount]} != #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[amount (1)]} || (([ISNULL](#{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping]}) ? "" : #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping]}) != ([ISNULL](#{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping (1)]}) ? "" : #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping (1)]})))</property>
+                      name="Expression">(#{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[order_date]} != #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[order_date (1)]} || (([ISNULL](#{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_date]}) ? 0 : #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_date]}) != ([ISNULL](#{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_date (1)]}) ? 0 : #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[shipping_date (1)]})) || #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[customer_id]} != #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[customer_id (1)]} || #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[warehouse_id]} != #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[warehouse_id (1)]} || #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[currency_id]} != #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[currency_id (1)]} || #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[items]} != #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[items (1)]} || #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[amount]} != #{Package\ETL Commandes\Merge Join.Outputs[Merge Join Output].Columns[amount (1)]})</property>
                     <property
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the friendly version of the expression. This expression version uses column names."
                       expressionType="Notify"
-                      name="FriendlyExpression">(order_date != [order_date (1)] || ((ISNULL(shipping_date) ? 0 : shipping_date) != (ISNULL([shipping_date (1)]) ? 0 : [shipping_date (1)])) || customer_id != [customer_id (1)] || warehouse_id != [warehouse_id (1)] || currency_id != [currency_id (1)] || items != [items (1)] || amount != [amount (1)] || ((ISNULL(shipping) ? "" : shipping) != (ISNULL([shipping (1)]) ? "" : [shipping (1)])))</property>
+                      name="FriendlyExpression">(order_date != [order_date (1)] || ((ISNULL(shipping_date) ? 0 : shipping_date) != (ISNULL([shipping_date (1)]) ? 0 : [shipping_date (1)])) || customer_id != [customer_id (1)] || warehouse_id != [warehouse_id (1)] || currency_id != [currency_id (1)] || items != [items (1)] || amount != [amount (1)])</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the position of the condition in the list of conditions that the transformation evaluates. The evaluation order is from the lowest to the highest value."
@@ -7877,11 +7950,60 @@ where [refTable].[code] = ?</property>
                       </properties>
                     </inputColumn>
                     <inputColumn
-                      refId="Package\ETL Commandes\Tri DHW.Inputs[Sort Input].Columns[shipping]"
-                      cachedDataType="wstr"
-                      cachedLength="10"
-                      cachedName="shipping"
-                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[shipping]">
+                      refId="Package\ETL Commandes\Tri DHW.Inputs[Sort Input].Columns[shipping_id]"
+                      cachedDataType="i4"
+                      cachedName="shipping_id"
+                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[shipping_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri DHW.Inputs[Sort Input].Columns[delivery_date]"
+                      cachedDataType="i4"
+                      cachedName="delivery_date"
+                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[delivery_date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri DHW.Inputs[Sort Input].Columns[delivery_time]"
+                      cachedDataType="i4"
+                      cachedName="delivery_time"
+                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[delivery_time]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri DHW.Inputs[Sort Input].Columns[shipping_price]"
+                      cachedDataType="numeric"
+                      cachedName="shipping_price"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      lineageId="Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[shipping_price]">
                       <properties>
                         <property
                           dataType="System.Int32"
@@ -8012,17 +8134,454 @@ where [refTable].[code] = ?</property>
                       </properties>
                     </outputColumn>
                     <outputColumn
-                      refId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[shipping]"
-                      dataType="wstr"
-                      length="10"
-                      lineageId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[shipping]"
-                      name="shipping">
+                      refId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[shipping_id]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[shipping_id]"
+                      name="shipping_id">
                       <properties>
                         <property
                           containsID="true"
                           dataType="System.Int32"
                           description="Specifies the lineage identifier of the input column that is associated with this output column."
-                          name="SortColumnId">#{Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[shipping]}</property>
+                          name="SortColumnId">#{Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[shipping_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[delivery_date]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[delivery_date]"
+                      name="delivery_date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[delivery_date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[delivery_time]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[delivery_time]"
+                      name="delivery_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[delivery_time]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[shipping_price]"
+                      dataType="numeric"
+                      lineageId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output].Columns[shipping_price]"
+                      name="shipping_price"
+                      precision="6"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\DHW Commandes join.Outputs[OLE DB Source Output].Columns[shipping_price]}</property>
+                      </properties>
+                    </outputColumn>
+                  </outputColumns>
+                  <externalMetadataColumns />
+                </output>
+              </outputs>
+            </component>
+            <component
+              refId="Package\ETL Commandes\Tri STG"
+              componentClassID="Microsoft.Sort"
+              contactInfo="Sort;Microsoft Corporation; Microsoft SQL Server; (C) Microsoft Corporation; All Rights Reserved; http://www.microsoft.com/sql/support;1"
+              description="Sorts input data in ascending or descending order when it cannot be sorted at its source. For example, sort sales data by 'customer id' before it is written to a flat file and delivered to another department. Note: We do not recommend this transformation for large data flows."
+              name="Tri STG"
+              version="1">
+              <properties>
+                <property
+                  dataType="System.Boolean"
+                  description="Indicates whether the Sort transformation removes rows with duplicate sort values."
+                  name="EliminateDuplicates">false</property>
+                <property
+                  dataType="System.Int32"
+                  description="Specifies the maximum number of threads to use for sorting."
+                  expressionType="Notify"
+                  name="MaximumThreads">-1</property>
+              </properties>
+              <inputs>
+                <input
+                  refId="Package\ETL Commandes\Tri STG.Inputs[Sort Input]"
+                  name="Sort Input">
+                  <inputColumns>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri STG.Inputs[Sort Input].Columns[order_code]"
+                      cachedCodepage="1252"
+                      cachedDataType="str"
+                      cachedLength="15"
+                      cachedName="order_code"
+                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[order_code]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">1</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri STG.Inputs[Sort Input].Columns[order_date]"
+                      cachedDataType="i4"
+                      cachedName="order_date"
+                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[order_date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri STG.Inputs[Sort Input].Columns[shipping_date]"
+                      cachedDataType="i4"
+                      cachedName="shipping_date"
+                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[shipping_date]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri STG.Inputs[Sort Input].Columns[items]"
+                      cachedDataType="i4"
+                      cachedName="items"
+                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[items]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri STG.Inputs[Sort Input].Columns[amount]"
+                      cachedDataType="r8"
+                      cachedName="amount"
+                      lineageId="Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[amount]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri STG.Inputs[Sort Input].Columns[customer_id]"
+                      cachedDataType="i4"
+                      cachedName="customer_id"
+                      lineageId="Package\ETL Commandes\Lookup client.Outputs[Lookup Match Output].Columns[customer_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri STG.Inputs[Sort Input].Columns[warehouse_id]"
+                      cachedDataType="i4"
+                      cachedName="warehouse_id"
+                      lineageId="Package\ETL Commandes\Lookup warehouse.Outputs[Lookup Match Output].Columns[warehouse_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri STG.Inputs[Sort Input].Columns[currency_id]"
+                      cachedDataType="wstr"
+                      cachedLength="3"
+                      cachedName="currency_id"
+                      lineageId="Package\ETL Commandes\Lookup devise.Outputs[Lookup Match Output].Columns[currency_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri STG.Inputs[Sort Input].Columns[shipping_id]"
+                      cachedDataType="i4"
+                      cachedName="shipping_id"
+                      lineageId="Package\ETL Commandes\Lookup shipping.Outputs[Lookup Match Output].Columns[shipping_id]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri STG.Inputs[Sort Input].Columns[delivery_time]"
+                      cachedDataType="i4"
+                      cachedName="delivery_time"
+                      lineageId="Package\ETL Commandes\Lookup shipping.Outputs[Lookup Match Output].Columns[delivery_time]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri STG.Inputs[Sort Input].Columns[delivery_date_int]"
+                      cachedDataType="i4"
+                      cachedName="delivery_date_int"
+                      lineageId="Package\ETL Commandes\Transformation delivery_date INT.Outputs[Derived Column Output].Columns[delivery_date_int]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                    <inputColumn
+                      refId="Package\ETL Commandes\Tri STG.Inputs[Sort Input].Columns[shipping_price]"
+                      cachedDataType="numeric"
+                      cachedName="shipping_price"
+                      cachedPrecision="6"
+                      cachedScale="2"
+                      lineageId="Package\ETL Commandes\Lookup ShippingPrices.Outputs[Lookup Match Output].Columns[shipping_price]">
+                      <properties>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the comparison options for character data."
+                          name="NewComparisonFlags">0</property>
+                        <property
+                          dataType="System.Int32"
+                          description="Specifies the sort order of the column."
+                          name="NewSortKeyPosition">0</property>
+                      </properties>
+                    </inputColumn>
+                  </inputColumns>
+                  <externalMetadataColumns />
+                </input>
+              </inputs>
+              <outputs>
+                <output
+                  refId="Package\ETL Commandes\Tri STG.Outputs[Sort Output]"
+                  isSorted="true"
+                  name="Sort Output">
+                  <outputColumns>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[order_code]"
+                      codePage="1252"
+                      dataType="str"
+                      length="15"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[order_code]"
+                      name="order_code"
+                      sortKeyPosition="1">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[order_code]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[order_date]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[order_date]"
+                      name="order_date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[order_date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[shipping_date]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[shipping_date]"
+                      name="shipping_date">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[shipping_date]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[items]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[items]"
+                      name="items">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[items]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[amount]"
+                      dataType="r8"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[amount]"
+                      name="amount">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\STG COmmandes.Outputs[OLE DB Source Output].Columns[amount]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[customer_id]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[customer_id]"
+                      name="customer_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\Lookup client.Outputs[Lookup Match Output].Columns[customer_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[warehouse_id]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[warehouse_id]"
+                      name="warehouse_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\Lookup warehouse.Outputs[Lookup Match Output].Columns[warehouse_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[currency_id]"
+                      dataType="wstr"
+                      length="3"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[currency_id]"
+                      name="currency_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\Lookup devise.Outputs[Lookup Match Output].Columns[currency_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[shipping_id]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[shipping_id]"
+                      name="shipping_id">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\Lookup shipping.Outputs[Lookup Match Output].Columns[shipping_id]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[delivery_time]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[delivery_time]"
+                      name="delivery_time">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\Lookup shipping.Outputs[Lookup Match Output].Columns[delivery_time]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[delivery_date_int]"
+                      dataType="i4"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[delivery_date_int]"
+                      name="delivery_date_int">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\Transformation delivery_date INT.Outputs[Derived Column Output].Columns[delivery_date_int]}</property>
+                      </properties>
+                    </outputColumn>
+                    <outputColumn
+                      refId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[shipping_price]"
+                      dataType="numeric"
+                      lineageId="Package\ETL Commandes\Tri STG.Outputs[Sort Output].Columns[shipping_price]"
+                      name="shipping_price"
+                      precision="6"
+                      scale="2">
+                      <properties>
+                        <property
+                          containsID="true"
+                          dataType="System.Int32"
+                          description="Specifies the lineage identifier of the input column that is associated with this output column."
+                          name="SortColumnId">#{Package\ETL Commandes\Lookup ShippingPrices.Outputs[Lookup Match Output].Columns[shipping_price]}</property>
                       </properties>
                     </outputColumn>
                   </outputColumns>
@@ -8171,7 +8730,7 @@ where [refTable].[code] = ?</property>
               startId="Package\ETL Commandes\Calcul delivery_date.Outputs[Derived Column Output]" />
             <path
               refId="Package\ETL Commandes.Paths[Derived Column Output1]"
-              endId="Package\ETL Commandes\Flat File Destination.Inputs[Flat File Destination Input]"
+              endId="Package\ETL Commandes\Lookup ShippingPrices.Inputs[Lookup Input]"
               name="Derived Column Output"
               startId="Package\ETL Commandes\Transformation delivery_date INT.Outputs[Derived Column Output]" />
             <path
@@ -8205,6 +8764,11 @@ where [refTable].[code] = ?</property>
               name="Lookup Match Output"
               startId="Package\ETL Commandes\Lookup shippingDate.Outputs[Lookup Match Output]" />
             <path
+              refId="Package\ETL Commandes.Paths[Lookup Match Output5]"
+              endId="Package\ETL Commandes\Tri STG.Inputs[Sort Input]"
+              name="Lookup Match Output"
+              startId="Package\ETL Commandes\Lookup ShippingPrices.Outputs[Lookup Match Output]" />
+            <path
               refId="Package\ETL Commandes.Paths[Merge Join Output]"
               endId="Package\ETL Commandes\UPSERT Commandes.Inputs[Conditional Split Input]"
               name="Merge Join Output"
@@ -8224,6 +8788,11 @@ where [refTable].[code] = ?</property>
               endId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\ETL Commandes\Tri DHW.Outputs[Sort Output]" />
+            <path
+              refId="Package\ETL Commandes.Paths[Sort Output1]"
+              endId="Package\ETL Commandes\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\ETL Commandes\Tri STG.Outputs[Sort Output]" />
             <path
               refId="Package\ETL Commandes.Paths[update]"
               endId="Package\ETL Commandes\DWH UPDATE Commandes.Inputs[OLE DB Command Input]"
@@ -18428,201 +18997,141 @@ where [refTable].[code] = ?</property>
     design-time-name="Package\ETL Commandes">
     <LayoutInfo>
       <GraphLayout
-        Capacity="32" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
+        Capacity="64" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:mssgm="clr-namespace:Microsoft.SqlServer.Graph.Model;assembly=Microsoft.SqlServer.Graph">
         <NodeLayout
-          Size="155.2,41.6"
-          Id="Package\ETL Commandes\Lookup shipping"
-          TopLeft="191.428574688581,462.211770840417" />
+          Size="236.8,41.6"
+          Id="Package\ETL Commandes\Transformation delivery_date INT"
+          TopLeft="169.571431459213,679.870596637033" />
+        <NodeLayout
+          Size="164,41.6"
+          Id="Package\ETL Commandes\DWH Commandes"
+          TopLeft="788.57144200072,894.247059149556" />
         <NodeLayout
           Size="167.2,41.6"
           Id="Package\ETL Commandes\Lookup warehouse"
           TopLeft="185.82856971585,232.282351542674" />
         <NodeLayout
-          Size="173.6,41.6"
-          Id="Package\ETL Commandes\Conversion Shipping"
-          TopLeft="180.000003065382,382.541179198955" />
-        <NodeLayout
-          Size="176.8,41.6"
-          Id="Package\ETL Commandes\Lookup shippingDate"
-          TopLeft="190.857146107421,533.50588870197" />
-        <NodeLayout
-          Size="160.8,41.6"
-          Id="Package\ETL Commandes\STG COmmandes"
-          TopLeft="180.22856971585,40.2823515426741" />
+          Size="184,41.6"
+          Id="Package\ETL Commandes\DHW Commandes join"
+          TopLeft="998.97144200072,296.647059149561" />
         <NodeLayout
           Size="145.6,41.6"
           Id="Package\ETL Commandes\Lookup devise"
           TopLeft="196.22856971585,314.682351542674" />
         <NodeLayout
-          Size="171.2,41.6"
-          Id="Package\ETL Commandes\Flat File Destination"
-          TopLeft="212.000003610338,766.870596454713" />
-        <NodeLayout
-          Size="172.8,41.6"
-          Id="Package\ETL Commandes\Calcul delivery_date"
-          TopLeft="191.428574688581,605.835299977629" />
-        <NodeLayout
-          Size="236.8,41.6"
-          Id="Package\ETL Commandes\Transformation delivery_date INT"
-          TopLeft="196.00000333786,682.164714316266" />
+          Size="177.6,41.6"
+          Id="Package\ETL Commandes\UPSERT Commandes"
+          TopLeft="879.77144200072,780.647059149557" />
         <NodeLayout
           Size="140.8,41.6"
           Id="Package\ETL Commandes\Lookup client"
           TopLeft="197.82856971585,133.882351542674" />
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\ETL Commandes\Conversion Shipping"
+          TopLeft="180.000003065382,382.541179198955" />
+        <NodeLayout
+          Size="118.4,41.6"
+          Id="Package\ETL Commandes\Tri DHW"
+          TopLeft="1038.17144200072,383.047059149561" />
+        <NodeLayout
+          Size="176.8,41.6"
+          Id="Package\ETL Commandes\Lookup shippingDate"
+          TopLeft="190.857146107421,533.50588870197" />
+        <NodeLayout
+          Size="155.2,41.6"
+          Id="Package\ETL Commandes\Lookup shipping"
+          TopLeft="191.428574688581,462.211770840417" />
+        <NodeLayout
+          Size="140.8,41.6"
+          Id="Package\ETL Commandes\Test UPDATE"
+          TopLeft="1229.37144200072,773.447059149556" />
+        <NodeLayout
+          Size="205.6,41.6"
+          Id="Package\ETL Commandes\DWH UPDATE Commandes"
+          TopLeft="1223.4285848384,890.835294872666" />
+        <NodeLayout
+          Size="160.8,41.6"
+          Id="Package\ETL Commandes\STG COmmandes"
+          TopLeft="180.22856971585,40.2823515426741" />
+        <NodeLayout
+          Size="172.8,41.6"
+          Id="Package\ETL Commandes\Calcul delivery_date"
+          TopLeft="191.428574688581,605.835299977629" />
         <EdgeLayout
-          Id="Package\ETL Commandes.Paths[Lookup Match Output2]"
-          TopLeft="267.914286390616,356.282351542674">
+          Id="Package\ETL Commandes.Paths[update1]"
+          TopLeft="1057.37144200072,797.847059149556">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,26.2588276562806"
+              EndConnector="172,0"
               Start="0,0"
-              End="0,18.7588276562806">
+              End="164.5,0">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,18.7588276562806" />
+                    End="164.5,0" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,3.5747263281403,96.3827734375,11.609375"
+              BoundingBox="66.4475,5,31.605,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\ETL Commandes.Paths[Lookup Match Output1]"
-          TopLeft="269.22856971585,273.882351542674">
+          Id="Package\ETL Commandes.Paths[update]"
+          TopLeft="1299.77144200072,815.047059149556">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,40.8"
+              EndConnector="26.4571428376801,75.788235723106"
               Start="0,0"
-              End="0,33.3">
+              End="26.4571428376801,68.288235723106">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.3" />
+                    End="0,33.894117861553" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,33.894117861553"
+                    Point2="0,37.894117861553"
+                    Point3="4,37.894117861553" />
+                  <mssgle:LineSegment
+                    End="22.4571428376801,37.894117861553" />
+                  <mssgle:CubicBezierSegment
+                    Point1="22.4571428376801,37.894117861553"
+                    Point2="26.4571428376801,37.894117861553"
+                    Point3="26.4571428376801,41.894117861553" />
+                  <mssgle:LineSegment
+                    End="26.4571428376801,68.288235723106" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,10.8453125,96.3827734375,11.609375"
+              BoundingBox="-2.57392858115997,42.894117861553,31.605,11.609375"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\ETL Commandes.Paths[Lookup Match Output]"
-          TopLeft="268.82856971585,175.482351542674">
+          Id="Package\ETL Commandes.Paths[OLE DB Source Output1]"
+          TopLeft="1094.17144200072,338.247059149561">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,56.8"
+              EndConnector="0,44.7999999999999"
               Start="0,0"
-              End="0,49.3">
+              End="0,37.2999999999999">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,49.3" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-48.19138671875,18.8453125,96.3827734375,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Commandes.Paths[Derived Column Output1]"
-          TopLeft="314.40000333786,723.764714316266">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-16.7999997275216,43.105882138447"
-              Start="0,0"
-              End="-16.7999997275216,35.605882138447">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,17.5529410692235" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,17.5529410692235"
-                    Point2="0,21.5529410692235"
-                    Point3="-4,21.5529410692235" />
-                  <mssgle:LineSegment
-                    End="-12.7999997275216,21.5529410692235" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-12.7999997275216,21.5529410692235"
-                    Point2="-16.7999997275216,21.5529410692235"
-                    Point3="-16.7999997275216,25.5529410692235" />
-                  <mssgle:LineSegment
-                    End="-16.7999997275216,35.605882138447" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Commandes.Paths[Derived Column Output]"
-          TopLeft="277.828574688581,647.435299977629">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="36.571428649279,34.729414338637"
-              Start="0,0"
-              End="36.571428649279,27.229414338637">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,13.3647071693185" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,13.3647071693185"
-                    Point2="0,17.3647071693185"
-                    Point3="4,17.3647071693185" />
-                  <mssgle:LineSegment
-                    End="32.571428649279,17.3647071693185" />
-                  <mssgle:CubicBezierSegment
-                    Point1="32.571428649279,17.3647071693185"
-                    Point2="36.571428649279,17.3647071693185"
-                    Point3="36.571428649279,21.3647071693185" />
-                  <mssgle:LineSegment
-                    End="36.571428649279,27.229414338637" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Commandes.Paths[Data Conversion Output]"
-          TopLeft="267.914288876981,424.141179198955">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="0,38.0705916414623"
-              Start="0,0"
-              End="0,30.5705916414623">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,30.5705916414623" />
+                    End="0,37.2999999999999" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18713,156 +19222,140 @@ where [refTable].[code] = ?</property>
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
-        <NodeLayout
-          Size="140.8,41.6"
-          Id="Package\ETL Commandes\Test UPDATE"
-          TopLeft="620.800003065382,1345.27059645471" />
-        <NodeLayout
-          Size="118.4,41.6"
-          Id="Package\ETL Commandes\Tri DHW"
-          TopLeft="429.600003065382,954.870596454713" />
-        <NodeLayout
-          Size="177.6,41.6"
-          Id="Package\ETL Commandes\UPSERT Commandes"
-          TopLeft="271.200003065382,1352.47059645471" />
-        <NodeLayout
-          Size="164,41.6"
-          Id="Package\ETL Commandes\DWH Commandes"
-          TopLeft="180.000003065382,1466.07059645471" />
-        <NodeLayout
-          Size="129.6,41.6"
-          Id="Package\ETL Commandes\Merge Join"
-          TopLeft="276.000003065382,1262.87059645471" />
-        <NodeLayout
-          Size="205.6,41.6"
-          Id="Package\ETL Commandes\DWH UPDATE Commandes"
-          TopLeft="614.857145903062,1462.65883217782" />
-        <NodeLayout
-          Size="184,41.6"
-          Id="Package\ETL Commandes\DHW Commandes join"
-          TopLeft="390.400003065382,868.470596454713" />
+        <EdgeLayout
+          Id="Package\ETL Commandes.Paths[Lookup Match Output2]"
+          TopLeft="267.914286390616,356.282351542674">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,26.2588276562806"
+              Start="0,0"
+              End="0,18.7588276562806">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,18.7588276562806" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,3.5747263281403,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Commandes.Paths[Lookup Match Output1]"
+          TopLeft="269.22856971585,273.882351542674">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.8"
+              Start="0,0"
+              End="0,33.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,33.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,10.8453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Commandes.Paths[Lookup Match Output]"
+          TopLeft="268.82856971585,175.482351542674">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,56.8"
+              Start="0,0"
+              End="0,49.3">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,49.3" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="-48.19138671875,18.8453125,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
         <EdgeLayout
           Id="Package\ETL Commandes.Paths[insert]"
-          TopLeft="360.000003065382,1394.07059645471">
+          TopLeft="968.57144200072,822.247059149556">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="-98.0000000000001,72.0000000000001"
+              EndConnector="-98.0000000000001,72"
               Start="0,0"
-              End="-98.0000000000001,64.5000000000001">
+              End="-98.0000000000001,64.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.0000000000001" />
+                    End="0,32" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,32.0000000000001"
-                    Point2="0,36.0000000000001"
-                    Point3="-4,36.0000000000001" />
+                    Point1="0,32"
+                    Point2="0,36"
+                    Point3="-4,36" />
                   <mssgle:LineSegment
-                    End="-94.0000000000001,36.0000000000001" />
+                    End="-94.0000000000001,36" />
                   <mssgle:CubicBezierSegment
-                    Point1="-94.0000000000001,36.0000000000001"
-                    Point2="-98.0000000000001,36.0000000000001"
-                    Point3="-98.0000000000001,40.0000000000001" />
+                    Point1="-94.0000000000001,36"
+                    Point2="-98.0000000000001,36"
+                    Point3="-98.0000000000001,40" />
                   <mssgle:LineSegment
-                    End="-98.0000000000001,64.5000000000001" />
+                    End="-98.0000000000001,64.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
           </EdgeLayout.Curve>
           <EdgeLayout.Labels>
             <mssgm:EdgeLabel
-              BoundingBox="-61.94998046875,41.0000000000001,25.8999609375,9.451171875"
+              BoundingBox="-61.9499804687501,41,25.8999609375,9.451171875"
               RelativePosition="Any" />
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\ETL Commandes.Paths[update]"
-          TopLeft="691.200003065382,1386.87059645471">
+          Id="Package\ETL Commandes.Paths[Derived Column Output]"
+          TopLeft="277.828574688581,647.435299977629">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="26.4571428376801,75.788235723106"
+              EndConnector="10.1428567706316,32.435296659404"
               Start="0,0"
-              End="26.4571428376801,68.288235723106">
+              End="10.1428567706316,24.935296659404">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,33.894117861553" />
+                    End="0,12.217648329702" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,33.894117861553"
-                    Point2="0,37.894117861553"
-                    Point3="4,37.894117861553" />
+                    Point1="0,12.217648329702"
+                    Point2="0,16.217648329702"
+                    Point3="4,16.217648329702" />
                   <mssgle:LineSegment
-                    End="22.4571428376801,37.894117861553" />
+                    End="6.14285677063157,16.217648329702" />
                   <mssgle:CubicBezierSegment
-                    Point1="22.4571428376801,37.894117861553"
-                    Point2="26.4571428376801,37.894117861553"
-                    Point3="26.4571428376801,41.894117861553" />
+                    Point1="6.14285677063157,16.217648329702"
+                    Point2="10.1428567706316,16.217648329702"
+                    Point3="10.1428567706316,20.217648329702" />
                   <mssgle:LineSegment
-                    End="26.4571428376801,68.288235723106" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="-2.57392858115995,42.894117861553,31.605,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Commandes.Paths[update1]"
-          TopLeft="448.800003065382,1369.67059645471">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="172,0"
-              Start="0,0"
-              End="164.5,0">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="164.5,0" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <mssgm:EdgeLabel
-              BoundingBox="66.4475,5,31.605,11.609375"
-              RelativePosition="Any" />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package\ETL Commandes.Paths[Sort Output]"
-          TopLeft="488.800003065382,996.470596454713">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-127.733333333333,266.4"
-              Start="0,0"
-              End="-127.733333333333,258.9">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,153.890731707317" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,153.890731707317"
-                    Point2="0,157.890731707317"
-                    Point3="-4,157.890731707317" />
-                  <mssgle:LineSegment
-                    End="-123.733333333333,157.890731707317" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-123.733333333333,157.890731707317"
-                    Point2="-127.733333333333,157.890731707317"
-                    Point3="-127.733333333333,161.890731707317" />
-                  <mssgle:LineSegment
-                    End="-127.733333333333,258.9" />
+                    End="10.1428567706316,24.935296659404" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18872,19 +19365,61 @@ where [refTable].[code] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\ETL Commandes.Paths[OLE DB Source Output1]"
-          TopLeft="485.600003065382,910.070596454713">
+          Id="Package\ETL Commandes.Paths[Data Conversion Output]"
+          TopLeft="267.914288876981,424.141179198955">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="0,44.8"
+              EndConnector="0,38.0705916414623"
               Start="0,0"
-              End="0,37.3">
+              End="0,30.5705916414623">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,37.3" />
+                    End="0,30.5705916414623" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="113.6,41.6"
+          Id="Package\ETL Commandes\Tri STG"
+          TopLeft="742.857155507925,690.058831959035" />
+        <NodeLayout
+          Size="129.6,41.6"
+          Id="Package\ETL Commandes\Merge Join"
+          TopLeft="972.142873698352,665.529419808239" />
+        <EdgeLayout
+          Id="Package\ETL Commandes.Paths[Sort Output]"
+          TopLeft="1097.37144200072,424.647059149561">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="-60.4285683023684,240.882360658679"
+              Start="0,0"
+              End="-60.4285683023684,233.382360658679">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,116.441180329339" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,116.441180329339"
+                    Point2="0,120.441180329339"
+                    Point3="-4,120.441180329339" />
+                  <mssgle:LineSegment
+                    End="-56.4285683023684,120.441180329339" />
+                  <mssgle:CubicBezierSegment
+                    Point1="-56.4285683023684,120.441180329339"
+                    Point2="-60.4285683023684,120.441180329339"
+                    Point3="-60.4285683023684,124.441180329339" />
+                  <mssgle:LineSegment
+                    End="-60.4285683023684,233.382360658679" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18895,30 +19430,126 @@ where [refTable].[code] = ?</property>
         </EdgeLayout>
         <EdgeLayout
           Id="Package\ETL Commandes.Paths[Merge Join Output]"
-          TopLeft="340.800003065382,1304.47059645471">
+          TopLeft="1036.94287369835,707.129419808239">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="19.2,47.9999999999999"
+              EndConnector="-68.3714316976314,73.5176393413172"
               Start="0,0"
-              End="19.2,40.4999999999999">
+              End="-68.3714316976314,66.0176393413172">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,19.9999999999999" />
+                    End="0,32.7588196706586" />
                   <mssgle:CubicBezierSegment
-                    Point1="0,19.9999999999999"
-                    Point2="0,23.9999999999999"
-                    Point3="4,23.9999999999999" />
+                    Point1="0,32.7588196706586"
+                    Point2="0,36.7588196706586"
+                    Point3="-4,36.7588196706586" />
                   <mssgle:LineSegment
-                    End="15.2,23.9999999999999" />
+                    End="-64.3714316976314,36.7588196706586" />
                   <mssgle:CubicBezierSegment
-                    Point1="15.2,23.9999999999999"
-                    Point2="19.2,23.9999999999999"
-                    Point3="19.2,27.9999999999999" />
+                    Point1="-64.3714316976314,36.7588196706586"
+                    Point2="-68.3714316976314,36.7588196706586"
+                    Point3="-68.3714316976314,40.7588196706586" />
                   <mssgle:LineSegment
-                    End="19.2,40.4999999999999" />
+                    End="-68.3714316976314,66.0176393413172" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <NodeLayout
+          Size="184,41.6"
+          Id="Package\ETL Commandes\Lookup ShippingPrices"
+          TopLeft="195.00000332083,761.882362336023" />
+        <EdgeLayout
+          Id="Package\ETL Commandes.Paths[Derived Column Output1]"
+          TopLeft="287.485717390021,721.470596637033">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="0,40.4117656989903"
+              Start="0,0"
+              End="0,32.9117656989903">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,32.9117656989903" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Commandes.Paths[Lookup Match Output5]"
+          TopLeft="316.333336654164,761.882362336023">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="483.323818853761,-30.2235303769885"
+              Start="0,0"
+              End="483.323818853761,-22.7235303769885">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,-8.24574075619362" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,-8.24574075619362"
+                    Point2="0,-12.2457407561936"
+                    Point3="4,-12.2457407561936" />
+                  <mssgle:LineSegment
+                    End="479.323818853761,-12.2457407561936" />
+                  <mssgle:CubicBezierSegment
+                    Point1="479.323818853761,-12.2457407561936"
+                    Point2="483.323818853761,-12.2457407561936"
+                    Point3="483.323818853761,-16.2457407561936" />
+                  <mssgle:LineSegment
+                    End="483.323818853761,-22.7235303769885" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <mssgm:EdgeLabel
+              BoundingBox="193.47052270813,-7.24574075619362,96.3827734375,11.609375"
+              RelativePosition="Any" />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+        <EdgeLayout
+          Id="Package\ETL Commandes.Paths[Sort Output1]"
+          TopLeft="856.457155507925,710.858831959035">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="115.685718190427,-24.5294121507956"
+              Start="0,0"
+              End="108.185718190427,-24.5294121507956">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="53.8428590952136,0" />
+                  <mssgle:CubicBezierSegment
+                    Point1="53.8428590952136,0"
+                    Point2="57.8428590952136,0"
+                    Point3="57.8428590952136,-4" />
+                  <mssgle:LineSegment
+                    End="57.8428590952136,-20.5294121507956" />
+                  <mssgle:CubicBezierSegment
+                    Point1="57.8428590952136,-20.5294121507956"
+                    Point2="57.8428590952136,-24.5294121507956"
+                    Point3="61.8428590952136,-24.5294121507956" />
+                  <mssgle:LineSegment
+                    End="108.185718190427,-24.5294121507956" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>
@@ -18931,25 +19562,15 @@ where [refTable].[code] = ?</property>
     </LayoutInfo>
   </TaskHost>
   <PipelineComponentMetadata
-    design-time-name="Package\ETL Commandes\Lookup shipping">
+    design-time-name="Package\ETL Commandes\DWH Commandes">
     <Properties>
       <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimShipping]</Value>
+        <Name>DataSourceViewID</Name>
       </Property>
       <Property>
         <Name>TableInfoObjectType</Name>
         <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -18977,30 +19598,7 @@ where [refTable].[code] = ?</property>
     </Properties>
   </PipelineComponentMetadata>
   <PipelineComponentMetadata
-    design-time-name="Package\ETL Commandes\Lookup shippingDate">
-    <Properties>
-      <Property>
-        <Name>OverwriteParamsSQLProp</Name>
-        <Value
-          type="q2:string">false</Value>
-      </Property>
-      <Property>
-        <Name>UsedTableName</Name>
-        <Value
-          type="q3:string">[dbo].[DimTemps]</Value>
-      </Property>
-      <Property>
-        <Name>TableInfoObjectType</Name>
-        <Value
-          type="q4:string">0</Value>
-      </Property>
-      <Property>
-        <Name>DataSourceViewID</Name>
-      </Property>
-    </Properties>
-  </PipelineComponentMetadata>
-  <PipelineComponentMetadata
-    design-time-name="Package\ETL Commandes\STG COmmandes">
+    design-time-name="Package\ETL Commandes\DHW Commandes join">
     <Properties>
       <Property>
         <Name>DataSourceViewID</Name>
@@ -19055,6 +19653,65 @@ where [refTable].[code] = ?</property>
       </Property>
       <Property>
         <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Commandes\Lookup shippingDate">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimTemps]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Commandes\Lookup shipping">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:string">false</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimShipping]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:string">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Commandes\STG COmmandes">
+    <Properties>
+      <Property>
+        <Name>DataSourceViewID</Name>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q2:string">Table</Value>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
@@ -20507,6 +21164,29 @@ where [refTable].[code] = ?</property>
         <Name>TableInfoObjectType</Name>
         <Value
           type="q2:string">Table</Value>
+      </Property>
+    </Properties>
+  </PipelineComponentMetadata>
+  <PipelineComponentMetadata
+    design-time-name="Package\ETL Commandes\Lookup ShippingPrices">
+    <Properties>
+      <Property>
+        <Name>OverwriteParamsSQLProp</Name>
+        <Value
+          type="q2:boolean">true</Value>
+      </Property>
+      <Property>
+        <Name>UsedTableName</Name>
+        <Value
+          type="q3:string">[dbo].[DimShippingPrices]</Value>
+      </Property>
+      <Property>
+        <Name>TableInfoObjectType</Name>
+        <Value
+          type="q4:int">0</Value>
+      </Property>
+      <Property>
+        <Name>DataSourceViewID</Name>
       </Property>
     </Properties>
   </PipelineComponentMetadata>
